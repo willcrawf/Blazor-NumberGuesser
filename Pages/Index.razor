@@ -1,0 +1,48 @@
+@page "/"
+
+@code {
+    private int? guessedNumber;
+    private int randomNumber = new Random().Next(1, 101);
+    private string message;
+    private int triesLeft = 5;
+
+    private void CheckGuess()
+    {
+        if (guessedNumber.HasValue)
+        {
+            triesLeft--;
+            if (guessedNumber == randomNumber)
+            {
+                message = "Congratulations! You've guessed the number.";
+            }
+            else if (triesLeft == 0)
+            {
+                message = "Sorry, you're out of tries. The number was " + randomNumber + ".";
+                ResetGame();
+            }
+            else if (guessedNumber < randomNumber)
+            {
+                message = "Too low! Tries left: " + triesLeft;
+            }
+            else
+            {
+                message = "Too high! Tries left: " + triesLeft;
+            }
+        }
+    }
+
+    private void ResetGame()
+    {
+        guessedNumber = null;
+        randomNumber = new Random().Next(1, 101);
+        message = null;
+        triesLeft = 5;
+    }
+}
+
+<h3>Number Guessing Game</h3>
+<p>Guess a number between 1 and 100.</p>
+
+<input @bind="guessedNumber" type="number" min="1" max="100" />
+<button @onclick="CheckGuess">Guess</button>
+<p>@message</p>

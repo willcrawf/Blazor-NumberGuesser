@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SyncfusionBlazorApp", "SyncfusionBlazorApp.csproj", "{EE12444A-52BC-4E5D-BF6E-59B37365FDC3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EE12444A-52BC-4E5D-BF6E-59B37365FDC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE12444A-52BC-4E5D-BF6E-59B37365FDC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE12444A-52BC-4E5D-BF6E-59B37365FDC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE12444A-52BC-4E5D-BF6E-59B37365FDC3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0C85EAF2-0203-4751-B347-35F0FC850491}
+	EndGlobalSection
+EndGlobal
