@@ -1,0 +1,21 @@
+@page "/test"
+@using Blazored.LocalStorage
+@inject ILocalStorageService LocalStorage
+
+<button @onclick="SetData">Set Data</button>
+<button @onclick="GetData">Get Data</button>
+
+@code {
+
+    private async Task SetData()
+    {
+        await LocalStorage.SetItemAsync<string>("testKey", "Hello from Daddy Wilbur!");
+    }
+
+    private async Task GetData()
+    {
+        var data = await LocalStorage.GetItemAsync<string>("testKey");
+        Console.WriteLine(data);  // Writes the data to the console.
+    }
+
+}

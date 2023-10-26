@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "BRb5ZQbl+OfVtLS30+Y4uQl6fV/la1t6ry38HUGLR8S360OPsryIEIXMfjgWdIqyOwEho54PqBlNxwXsgk+XoA==",
+  "dgSpecHash": "GMag6ttj0Z6cwdLex7JTMiDqJ7qdyY34uWWH8wBzyDgeVLhYyiKJ3S60uQ/kMfj0SWeWeoXJRwL9ZyuCrfRJXA==",
   "success": true,
   "projectFilePath": "C:\\Users\\wicra\\OneDrive\\Desktop\\Code2\\SyncfusionBlazorApp\\SyncfusionBlazorApp\\SyncfusionBlazorApp.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\wicra\\.nuget\\packages\\blazored.localstorage\\4.4.0\\blazored.localstorage.4.4.0.nupkg.sha512",
     "C:\\Users\\wicra\\.nuget\\packages\\microsoft.aspnetcore.authorization\\7.0.0\\microsoft.aspnetcore.authorization.7.0.0.nupkg.sha512",
     "C:\\Users\\wicra\\.nuget\\packages\\microsoft.aspnetcore.components\\7.0.0\\microsoft.aspnetcore.components.7.0.0.nupkg.sha512",
     "C:\\Users\\wicra\\.nuget\\packages\\microsoft.aspnetcore.components.analyzers\\7.0.0\\microsoft.aspnetcore.components.analyzers.7.0.0.nupkg.sha512",
@@ -12,6 +13,11 @@
     "C:\\Users\\wicra\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly\\7.0.0\\microsoft.aspnetcore.components.webassembly.7.0.0.nupkg.sha512",
     "C:\\Users\\wicra\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.devserver\\7.0.0\\microsoft.aspnetcore.components.webassembly.devserver.7.0.0.nupkg.sha512",
     "C:\\Users\\wicra\\.nuget\\packages\\microsoft.aspnetcore.metadata\\7.0.0\\microsoft.aspnetcore.metadata.7.0.0.nupkg.sha512",
+    "C:\\Users\\wicra\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.13\\microsoft.entityframeworkcore.7.0.13.nupkg.sha512",
+    "C:\\Users\\wicra\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.13\\microsoft.entityframeworkcore.abstractions.7.0.13.nupkg.sha512",
+    "C:\\Users\\wicra\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\7.0.13\\microsoft.entityframeworkcore.analyzers.7.0.13.nupkg.sha512",
+    "C:\\Users\\wicra\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\7.0.0\\microsoft.extensions.caching.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\wicra\\.nuget\\packages\\microsoft.extensions.caching.memory\\7.0.0\\microsoft.extensions.caching.memory.7.0.0.nupkg.sha512",
     "C:\\Users\\wicra\\.nuget\\packages\\microsoft.extensions.configuration\\7.0.0\\microsoft.extensions.configuration.7.0.0.nupkg.sha512",
     "C:\\Users\\wicra\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\7.0.0\\microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\wicra\\.nuget\\packages\\microsoft.extensions.configuration.binder\\7.0.0\\microsoft.extensions.configuration.binder.7.0.0.nupkg.sha512",
@@ -35,8 +41,7 @@
     "C:\\Users\\wicra\\.nuget\\packages\\syncfusion.pdfexport.net.core\\23.1.42\\syncfusion.pdfexport.net.core.23.1.42.nupkg.sha512",
     "C:\\Users\\wicra\\.nuget\\packages\\system.io.pipelines\\7.0.0\\system.io.pipelines.7.0.0.nupkg.sha512",
     "C:\\Users\\wicra\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",
-    "C:\\Users\\wicra\\.nuget\\packages\\system.text.json\\7.0.0\\system.text.json.7.0.0.nupkg.sha512",
-    "C:\\Users\\wicra\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\7.0.11\\microsoft.netcore.app.runtime.mono.browser-wasm.7.0.11.nupkg.sha512"
+    "C:\\Users\\wicra\\.nuget\\packages\\system.text.json\\7.0.0\\system.text.json.7.0.0.nupkg.sha512"
   ],
   "logs": []
 }

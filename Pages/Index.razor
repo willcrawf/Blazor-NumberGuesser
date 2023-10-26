@@ -1,33 +1,73 @@
 @page "/"
+@inject ILocalStorageService LocalStorage
+@using Blazored.LocalStorage
 
 @code {
     private int? guessedNumber;
     private int randomNumber = new Random().Next(1, 101);
-    private string message;
+    private string? message;
     private int triesLeft = 5;
+    private int totalWins = 0;
+    private int totalLosses = 0;
+    private double winLossRatio = 0.0;
 
-    private void CheckGuess()
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            totalWins = await LocalStorage.GetItemAsync<int>("winCount");
+            totalLosses = await LocalStorage.GetItemAsync<int>("lossCount");
+            CalculateWinLossRatio();
+        }
+        catch
+        {
+            totalWins = 0;
+            totalLosses = 0;
+            winLossRatio = 0.0;
+        }
+    }
+
+    private void CalculateWinLossRatio()
+    {
+        if (totalLosses == 0)
+        {
+            winLossRatio = totalWins;
+        }
+        else
+        {
+            winLossRatio = (double)totalWins / totalLosses;
+        }
+    }
+
+    private async void CheckGuess()
     {
         if (guessedNumber.HasValue)
         {
             triesLeft--;
+
             if (guessedNumber == randomNumber)
             {
                 message = "Congratulations! You've guessed the number.";
-            }
-            else if (triesLeft == 0)
-            {
-                message = "Sorry, you're out of tries. The number was " + randomNumber + ".";
-                ResetGame();
+                totalWins++;
+                await LocalStorage.SetItemAsync<int>("winCount", totalWins);
             }
             else if (guessedNumber < randomNumber)
             {
-                message = "Too low! Tries left: " + triesLeft;
+                message = $"Too low! Tries left: {triesLeft}";
             }
             else
             {
-                message = "Too high! Tries left: " + triesLeft;
+                message = $"Too high! Tries left: {triesLeft}";
             }
+
+            if (triesLeft == 0 && guessedNumber != randomNumber)
+            {
+                message = $"Sorry, you're out of tries. The number was {randomNumber}.";
+                totalLosses++;
+                await LocalStorage.SetItemAsync<int>("lossCount", totalLosses);
+            }
+
+            CalculateWinLossRatio();
         }
     }
 
@@ -40,9 +80,19 @@
     }
 }
 
-<h3>Number Guessing Game</h3>
-<p>Guess a number between 1 and 100.</p>
-
-<input @bind="guessedNumber" type="number" min="1" max="100" />
-<button @onclick="CheckGuess">Guess</button>
-<p>@message</p>
+<div class="game-container">
+    <h3>Number Guessing Game</h3>
+    <p>Guess a number between 1 and 100.</p>
+    
+    <input @bind="guessedNumber" type="number" min="1" max="100" />
+    <button @onclick="CheckGuess">Guess</button>
+    <p>@message</p>
+    
+    <div class="score-container">
+        <h4>Score:</h4>
+        <p>@totalWins Wins</p>
+        <p>@totalLosses Losses</p>
+        <p>Win/Loss ratio: @winLossRatio.ToString("0.00")</p>
+    </div>
+    <button @onclick="ResetGame">Reset Game</button>
+</div>

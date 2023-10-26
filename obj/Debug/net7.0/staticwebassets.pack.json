@@ -21,6 +21,10 @@
       "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
     },
     {
+      "Id": "C:\\Users\\wicra\\OneDrive\\Desktop\\Code2\\SyncfusionBlazorApp\\SyncfusionBlazorApp\\wwwroot\\css\\mystyles.css",
+      "PackagePath": "staticwebassets\\css\\mystyles.css"
+    },
+    {
       "Id": "C:\\Users\\wicra\\OneDrive\\Desktop\\Code2\\SyncfusionBlazorApp\\SyncfusionBlazorApp\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
       "PackagePath": "staticwebassets\\css\\open-iconic"
     },
